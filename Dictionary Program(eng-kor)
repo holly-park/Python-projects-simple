@@ -1,0 +1,100 @@
+mydic = {}
+def __init__(mydic):
+    mydic['survey']='조사하다'
+    mydic['flower']='꽃'
+    mydic['cloud']='구름'
+    mydic['rain']='비'
+    mydic['rainbow']='무지개'
+    mydic['wind']='바람'
+    mydic['law']='법'
+    
+
+"""
+def search(mydic):
+    key = input("단어: ")
+    if key in list(mydic.keys()):
+        print(key, "===>", mydic[key])
+    else:
+        valuesList = list(mydic.values())
+        if key in valuesList:
+            index = valuesList.index(key)
+            keyList = list(mydic.keys())
+            print(key, "===>", keyList[index])
+        else:
+            print("There is no such a word")
+"""
+
+
+def search(mydic):
+    key = input("단어: ")
+    if key in mydic:
+        print(key, "===>", mydic[key])
+    else:
+        print("There is no such a word")
+
+
+
+def append(mydic):
+    key = input("English word:  ")
+    value = input("Korean meaning:  ")
+
+    mydic[key]=value
+
+
+def modify(mydic):
+    key=input("word: ")
+    if key in list(mydic.keys()):
+        value = input("meaning: ")
+        mydic[key] = value
+
+def deleteDic(mydic):
+    key = input("word: ")
+    if key in list(mydic.keys()):
+        mydic.pop(key)
+
+
+def output(mydic):
+    for key in mydic: 
+        print(key, "===>", mydic[key])
+
+
+"""
+__init__(mydic)
+append(mydic)
+output(mydic)
+"""
+
+
+
+def menuDisplay():
+    print("----------")
+    print("  CHOOSE  ")
+    print("----------")
+    print("1.Search")
+    print("2.Add")
+    print("3.Correct")
+    print("4.Delete")
+    print("5.View all")
+    print("6.Exit")
+
+
+def start(mydic):
+    __init__(mydic)
+    while(True):
+        menuDisplay()
+        sel = input("Select: ")
+        if sel=="1":
+            search(mydic)
+        elif sel=="2":
+            append(mydic)
+        elif sel=="3":
+            modify(mydic)
+        elif sel=="4":
+            deleteDic(mydic)
+        elif sel=="5":
+            output(mydic)
+        else:
+            break
+
+
+start(mydic)
