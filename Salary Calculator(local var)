@@ -1,0 +1,42 @@
+dataList = list() 
+
+def append(dataList):
+     while(True):
+        temp = dict() 
+        temp['name']=input("Enter your name: ")
+        temp['worktime']=int(input("Enter your total worktime: "))
+        temp['perpay']=int(input("pay per an hour: "))
+
+        dataList.append(temp)
+        again = input("continue? 1.yes 2.no(enter number)")
+        if again != "1":
+            break
+
+def output(dataList):
+    for data in dataList:
+        print(data['name'], end='\t')
+        print(data['worktime'], end='\t')
+        print(data['perpay'], end='\t')
+        print(data['pay'], end='\n')
+
+def process(dataList):
+    for data in dataList:
+        data['pay']=data['worktime']*data['perpay']
+
+def start(dataList):
+    while(True):
+        print("1.add")
+        print("2.calculate")
+        print("0.exit")
+        menu=input("choose: ")
+        if menu=="1":
+            append(dataList)
+        elif menu=="2":
+            process(dataList)
+            output(dataList)
+        else:
+            print("The program finishes.")
+            return
+
+
+start(dataList)
