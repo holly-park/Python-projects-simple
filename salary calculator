@@ -1,0 +1,34 @@
+def append():
+    global dataList
+    while(True):
+        temp ={}
+        temp['name']=input("Enter your name: ")
+        temp['worktime']=int(input("Enter your total worktime: "))
+        temp['perpay']=int(input("Pay per an 1 Hour : "))
+        dataList.append(temp)
+
+        again = input("계속? 1.Y 2.N(Enter Number)")
+        if again != "1":
+            break
+def output():
+    global dataList
+    for data in dataList:
+        print(data['name'], end='\t')
+        print(data['worktime'], end='\t')
+        print(data['perpay'])
+
+def start():
+    while(True):
+        print("1.add more")
+        print("2.calculate")
+        print("0.exit")
+        menu=input("choose: ")
+        if menu=="1":
+            append()
+        elif menu=="2":
+            output()
+        else:
+            print("The program finishes")
+            return
+
+start()
