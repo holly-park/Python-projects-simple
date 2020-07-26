@@ -11,7 +11,7 @@ def __init__(mydic):
 
 """
 def search(mydic):
-    key = input("단어: ")
+    key = input("word: ")
     if key in list(mydic.keys()):
         print(key, "===>", mydic[key])
     else:
@@ -26,7 +26,7 @@ def search(mydic):
 
 
 def search(mydic):
-    key = input("단어: ")
+    key = input("word: ")
     if key in mydic:
         print(key, "===>", mydic[key])
     else:
@@ -35,8 +35,8 @@ def search(mydic):
 
 
 def append(mydic):
-    key = input("English word:  ")
-    value = input("Korean meaning:  ")
+    key = input("word:  ")
+    value = input("meaning:  ")
 
     mydic[key]=value
 
