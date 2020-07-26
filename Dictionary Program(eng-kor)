@@ -98,7 +98,8 @@ def start(mydic):
         elif sel=="5":
             output(mydic)
         else:
-            break
+            print("program finishes")
+            return
 
 
 start(mydic)
