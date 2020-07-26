@@ -1,0 +1,24 @@
+#1
+"""
+Example 1. 
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+BCDEFGHIJKLMNOPQRSTUVWXYZA
+CDEFGHIJKLMNOPQRSTUVWXYZAB
+...
+ZABCDEFGHIJKLMNOPQRSTUVWXY
+"""
+
+for i in range(0,26):
+    k=ord('A')+i
+    for j in range(0,26):
+        print( chr(k), end="")
+        k=k+1
+        if k>ord('Z'):
+            k=ord('A')
+    print()
+    
+ 
+ #2
+base_a=ord('A')
+for i in range(0,26):
+    print(chr(base_a + i))
