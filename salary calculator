@@ -7,7 +7,7 @@ def append():
         temp['perpay']=int(input("Pay per an 1 Hour : "))
         dataList.append(temp)
 
-        again = input("계속? 1.Y 2.N(Enter Number)")
+        again = input("continue? 1.Y 2.N(Enter Number)")
         if again != "1":
             break
 def output():
