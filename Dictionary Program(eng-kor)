@@ -46,11 +46,15 @@ def modify(mydic):
     if key in list(mydic.keys()):
         value = input("meaning: ")
         mydic[key] = value
+    else:
+        print("There is no such a word.")
 
 def deleteDic(mydic):
     key = input("word: ")
     if key in list(mydic.keys()):
         mydic.pop(key)
+    else:
+        print("There is no such a word.") 
 
 
 def output(mydic):
