@@ -1,0 +1,11 @@
+def multiTable(start, end):
+    if start>end:
+        print("A larger number should come in front.")
+        return
+
+    for i in range(start, end+1):
+        print("***", i, " TIMES***")
+        for j in range(1,10):
+            print("%3d x %3d = %3d"%(i,j,i*j))
+
+multiTable()
