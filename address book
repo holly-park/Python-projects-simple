@@ -1,0 +1,44 @@
+#name, contact number, email
+
+class AddressList:
+    name=""
+    contact=""
+    email=""
+    def __init__(self, name="", contact="", email=""):
+        self.name=name
+        self.contact=contact
+        self.email=email
+    def output1(self):
+        print(self.name, self.contact, self.email)
+
+class ListMgr:
+    adrList=[]
+    def __init__(self):
+        self.adrList.append(AddressList("amy", "0000-222", "djdk@giit.com"))
+        self.adrList.append(AddressList("lydia", "0001-222", "22gdk@cgiit.com"))
+        self.adrList.append(AddressList("john", "0002-222", "sdkk@gitt.com"))
+    def append(self):
+        data=AddressList()
+        data.name=input("name: ")
+        data.contact=input("contact number: ")
+        data.email=input("email: ")
+        self.adrList.append(data)
+    def output2(self):
+        for item in self.adrList:
+            item.output1()
+    def menuDisplay(self):
+        print("1.add")
+        print("2.printout")
+    def start(self):
+        while(True):
+            self.menuDisplay()
+            sel=input("choose: ")
+            if sel=="1":
+                self.append()
+            elif sel=="2":
+                self.output2()
+            else:
+                break
+
+mgr=ListMgr()
+mgr.start()
